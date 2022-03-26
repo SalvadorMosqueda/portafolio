@@ -22,6 +22,17 @@ const proyectosSchema = mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"Usuario"
     },
+    cliente:{
+        type:String,
+        trim:true,
+        require:true
+    },
+    tareas: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Tarea",
+        },
+    ],
     colaboradores:[
         {
             type:mongoose.Schema.Types.ObjectId,

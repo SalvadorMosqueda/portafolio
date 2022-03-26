@@ -27,6 +27,10 @@ const tareaSchema = mongoose.Schema({
         //enum hace que que solo se permitan los valores que estan en ese arreglo
         enum:['Baja', 'Media','Alta']
     },
+    completado:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Usuario'
+    },
     proyecto:{
         type: mongoose.Schema.Types.ObjectId,
         ref:'Proyecto'
